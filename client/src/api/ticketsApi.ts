@@ -24,7 +24,7 @@ export class ApiRequestError extends Error {
 
 const http = axios.create({
   baseURL:
-    import.meta.env.VITE_API_URL ?? "http://localhost:5000/api",
+    import.meta.env.VITE_API_URL ?? "https://support-ticket-dashboard-1-y8z9.onrender.com/api",
   timeout: 10_000,
 });
 
