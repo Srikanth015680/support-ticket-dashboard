@@ -11,7 +11,7 @@ export function createApp() {
 
   app.use(
     cors({
-      origin: process.env.CLIENT_URL ?? "https://support-ticket-dashboard-pi.vercel.app",
+      origin: process.env.CLIENT_URL ?? "https://support-ticket-dashboard-nkp7.vercel.app",
     }),
   );
 
