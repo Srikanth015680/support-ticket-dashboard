@@ -86,9 +86,19 @@ export async function updateTicket(
   input: UpdateTicketInput,
 ) {
   try {
+    const data: Prisma.TicketUpdateInput = {};
+
+    if (input.status !== undefined) {
+      data.status = input.status;
+    }
+
+    if (input.priority !== undefined) {
+      data.priority = input.priority;
+    }
+
     return await prisma.ticket.update({
       where: { id },
-      data: input,
+      data,
     });
   } catch (error) {
     if (
